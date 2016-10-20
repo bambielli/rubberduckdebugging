@@ -1,0 +1,14 @@
+{
+  "name": "rubberduckbot",
+  "version": "1.0.0",
+  "description": "quack",
+  "main": "rubber_duck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "botkit": "^0.4.0"
+  }
+}
