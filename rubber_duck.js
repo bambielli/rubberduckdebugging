@@ -3,7 +3,7 @@ if (!process.env.token) {
     process.exit(1);
 }
 
-var Botkit = require('./lib/Botkit.js');
+var Botkit = require('botkit');
 
 var controller = Botkit.slackbot({
     debug: true,
@@ -13,6 +13,6 @@ var bot = controller.spawn({
     token: process.env.token
 }).startRTM();
 
-controller.on('message_received', function(bot, message) {
+controller.on('direct_message', function(bot, message) {
     bot.reply(message, "Quack")
 });
