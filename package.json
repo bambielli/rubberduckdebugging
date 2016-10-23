@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "botkit": "^0.4.0"
+    "botkit": "^0.4.0",
+    "botkit-storage-redis": "^1.0.1"
+  },
+  "devDependencies": {
+    "localtunnel": "^1.8.1"
   }
 }
