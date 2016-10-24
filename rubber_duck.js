@@ -27,11 +27,8 @@ var redisConfig = {
 }
 var redisStorage = require('botkit-storage-redis')(redisConfig)
 
-console.log(process.env.clientId)
-console.log(process.env.clientSecret)
-console.log(process.env.port)
-if (!process.env.clientId || !process.env.clientSecret || !process.env.port || !process.env.redirectUri) {
-  console.log('Error: Specify clientId clientSecret, port and redirectUri in environment');
+if (!process.env.clientId || !process.env.clientSecret || !process.env.PORT || !process.env.redirectUri) {
+  console.log('Error: Specify clientId clientSecret, PORT (NOTE THE UPPERCASE) and redirectUri in environment');
   process.exit(1);
 }
 
@@ -47,7 +44,7 @@ var controller = Botkit.slackbot({
   }
 );
 
-controller.setupWebserver(process.env.port,function(err,webserver) {
+controller.setupWebserver(process.env.PORT,function(err,webserver) {
   controller
     .createHomepageEndpoint(controller.webserver)
     .createOauthEndpoints(controller.webserver,function(err,req,res) {
