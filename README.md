@@ -1,2 +1,2 @@
-# RubberDuckBot
+# Quack
 Quack
